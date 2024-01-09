@@ -42,7 +42,7 @@ VALIDATE $? "Installing rabbitmq server"
 
 systemctl enable rabbitmq-server -y &>> $LOGFILE
 
-VALIDATE $? "Enabling robbit mw server"
+VALIDATE $? "Enabling robbitmq server"
 
 systemctl start rabbitmq-server  &>> $LOGFILE
 
