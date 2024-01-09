@@ -40,7 +40,7 @@ dnf install rabbitmq-server -y  &>> $LOGFILE
 
 VALIDATE $? "Installing rabbitmq server"
 
-systemctl enable rabbitmq-server -y &>> $LOGFILE
+systemctl enable rabbitmq-server &>> $LOGFILE
 
 VALIDATE $? "Enabling robbitmq server"
 
