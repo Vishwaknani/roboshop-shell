@@ -27,3 +27,55 @@ else
     echo "you are root User"
 
 fi
+
+dnf install python36 gcc python3-devel -y
+
+VALIDATE $? "Installing python "
+
+id roboshop
+if [ $? -ne 0 ]
+then
+useradd roboshop &>> $LOGFILE
+
+VALIDATE $? "User creation"
+else
+    echo -e "roboshop already exits"
+
+VALIDATE $? "create roboshp user"
+
+fi
+
+mkdir -p /app &>> $LOGFILE
+
+VALIDATE $? "Make directory"
+
+curl -L -o /tmp/payment.zip https://roboshop-builds.s3.amazonaws.com/payment.zip &>> $LOGFILE
+
+VALIDATE $? "Downloading roboshopbuild"
+
+cd /app 
+
+unzip -o /tmp/payment.zip  &>> $LOGFILE
+
+VALIDATE $? "Unzipping payment"
+
+pip3.6 install -r requirements.txt &>> $LOGFILE
+
+VALIDATE $? "Installing dependencies"
+
+cp payment.service /etc/systemd/system/payment.service &>> $LOGFILE
+
+VALIDATE $? "Copying payment service"
+
+systemctl daemon-reload &>> $LOGFILE
+
+VALIDATE $? "Deamon reloded"
+
+
+systemctl enable payment &>> $LOGFILE
+
+VALIDATE $? "Enabling payment"
+
+systemctl start payment &>> $LOGFILE
+
+VALIDATE $? "Started payment" 
