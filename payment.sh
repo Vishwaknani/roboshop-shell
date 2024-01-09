@@ -63,7 +63,7 @@ pip3.6 install -r requirements.txt &>> $LOGFILE
 
 VALIDATE $? "Installing dependencies"
 
-cp payment.service /etc/systemd/system/payment.service &>> $LOGFILE
+cp payment.service  /etc/systemd/system/payment.service
 
 VALIDATE $? "Copying payment service"
 
