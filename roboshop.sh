@@ -25,13 +25,13 @@ do
     --change-batch '
     {
         "Comment": "Testing creating a record set"
-        ,"Changes": [{
+        "Changes": [{
         "Action"              : "CREATE"
-        ,"ResourceRecordSet"  : {,
+        "ResourceRecordSet"  : {
            "Name"              : "'$i'.'$DOMAIN_NAME'"
-           ,"Type"             : "A",
-           ,"TTL"              : 1,
-           ,"ResourceRecords"  : [{ ,
+           "Type"             : "A"
+           "TTL"              : 1
+           "ResourceRecords"  : [{ 
              "Value"           : "'$IP_ADDRESS'"
          }]
         }
