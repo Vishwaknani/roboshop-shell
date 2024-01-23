@@ -2,9 +2,8 @@
 
 AMI=ami-0f3c7d07486cad139
 SG_ID=sg-0e8c45124526c632d
-INSTANCES=(")
-INSTANCES=("mongodb" "redis" "mysql" rabbitmq" "catalogue" "user" "cart" "shipping" "payment" "dispatch" "web")
-
+INSTANCES=("mongodb" "redis" "mysql" "rabbitmq" "catalogue" "user" "cart" "shipping" "payment" "dispatch" "web")
+ 
 for i in "${INSTANCES[@]}"
 do
     echo "instance is: $i"
