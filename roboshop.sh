@@ -15,10 +15,10 @@ do
     fi
 
     PRIVATE_IPADDRESS=$(aws ec2 run-instances \
-                    --image-id ami-03265a0778a880afb \
+                    --image-id ami-0f3c7d07486cad139 \
                     --count 1 \
                     --instance-type "$INSTANCE_TYPE" \
-                    --security-group-ids sg-02deaf6b5f3dd44c0 \
+                    --security-group-ids sg-0e8c45124526c632d \
                     --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=$i}]" \
                     --query 'Instances[0].PrivateIpAddress' \
                     --output text)
