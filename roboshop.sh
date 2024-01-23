@@ -27,11 +27,11 @@ do
         "Comment": "Testing creating a record set"
         ,"Changes": [{
         "Action"              : "CREATE"
-        ,"ResourceRecordSet"  : {
+        ,"ResourceRecordSet"  : {,
            "Name"              : "'$i'.'$DOMAIN_NAME'"
-           ,"Type"             : "A"
-           ,"TTL"              : 1
-           ,"ResourceRecords"  : [{ 
+           ,"Type"             : "A",
+           ,"TTL"              : 1,
+           ,"ResourceRecords"  : [{ ,
              "Value"           : "'$IP_ADDRESS'"
          }]
         }
