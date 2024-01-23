@@ -34,10 +34,10 @@ do
         ,"TTL"              : 1
         ,"ResourceRecords"  : [{
             "Value"         : "'$IP_ADDRESS'"
-        }]
-      }
-    }]
-    }
+         }]
+        }
+      }]
+     }
     '
 done
 
