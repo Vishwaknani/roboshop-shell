@@ -26,9 +26,9 @@ do
     {
         "Comment": "Testing creating a record set"
           ,"Changes": [{
-          "Action"              : "CREATE"
+           "Action"              : "CREATE"
            ,"ResourceRecordSet"  : {
-          "Name"              : "'$i'.'$DOMAIN_NAME'"
+           "Name"              : "'$i'"."'$DOMAIN_NAME'"
            ,"Type"             : "A"
            ,"TTL"              : 1
            ,"ResourceRecords"  : [{ 
