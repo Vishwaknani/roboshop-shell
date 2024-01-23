@@ -4,7 +4,7 @@ AMI=ami-0f3c7d07486cad139
 SG_ID=sg-0e8c45124526c632d
 INSTANCES=("mongodb" "redis" "mysql" "rabbitmq" "catalogue" "user" "cart" "shipping" "payment" "dispatch" "web")
 ZONE_ID=Z0824185329GEFCO1CV59
-DOMAIN_NAME="vishwak.online"
+DOMAIN_NAME="Vishwak.online"
 
 for i in "${INSTANCES[@]}"
 do
@@ -29,7 +29,7 @@ do
     ,"Changes": [{
       "Action"              : "CREATE"
       ,"ResourceRecordSet"  : {
-        "Name"              : "'$i','$DOMAIN_NAME'"
+        "Name"              : "'$i'.'$DOMAIN_NAME'"
         ,"Type"             : "A"
         ,"TTL"              : 1
         ,"ResourceRecords"  : [{
